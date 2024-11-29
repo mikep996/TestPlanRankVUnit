@@ -10,25 +10,13 @@ set fileList {}
 
 # preparing coverage list for merge
 foreach file [fileutil::findByPattern "./vunit_out/test_output" *.acdb] {
-	regexp {(./vunit_out/test_output/lib.)(.*)(\.)(.*)(_)(.*)(/rivierapro/coverage.acdb)} $file m0 m1 m2 m3 m4 m5 m6;
-	puts $file
-	puts $m2
-	if [string match "*.*" $m2] {
-		regexp {(.*)(\.)(.*)} $m2 l0 l1 l2 l3 ;
-		set testbench $l1
-		set testname $l3
-	} else {
-		set testbench $m2
-		set testname $m4
-	}
-	puts $testbench
+	regexp {(./vunit_out/test_output/lib.)(.*)(_)(.*)(/rivierapro/coverage.acdb)} $file m0 m1 m2;
+	set testname "lib.$m2"
 	puts $testname
-    lappend fileList -i $file 
+	lappend fileList -i $file 
 	# update the proper testname for coverage.acdb file (if needed)
 	catch {acdb edit -i $file -move testname coverage $testname}
 }
-
-file mkdir output
 
 # Import test plan to ACDB
 xml2acdb -dataorder id,feature,description,link,type,weight,user,user -i input/testplan.xml -o input/plan.acdb
