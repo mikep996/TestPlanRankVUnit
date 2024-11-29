@@ -2,9 +2,7 @@
 
 from vunit import VUnit
 from pathlib import Path
-
-#def post_run(results):
-#    results.merge_coverage(file_name="output/results.acdb", args=["-associative", "-i", "input/plan.acdb"])
+import os
 
 # Setting root as path to the example directory
 root = Path(__file__).parent
@@ -32,7 +30,9 @@ lib.set_sim_option("rivierapro.vsim_flags", ["-acdb +access +r+m+base64_enc -acd
 # toggle coverage 
 lib.set_sim_option("rivierapro.init_files.before_run", ["./src/toggle.do"])
 
-#vu.main(post_run=post_run)
+# folder for simulation outputs
+os.mkdir('./output')
+
 vu.main()
 
 
