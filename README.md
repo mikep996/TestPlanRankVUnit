@@ -1,5 +1,5 @@
 # Featured testplan_rank sample by VUnit
-- see the results.txt from origunal testplan_rank sample
+- see the results.txt from original testplan_rank sample
   
 # How to Run
 
