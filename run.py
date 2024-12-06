@@ -31,7 +31,8 @@ lib.set_sim_option("rivierapro.vsim_flags", ["-acdb +access +r+m+base64_enc -acd
 lib.set_sim_option("rivierapro.init_files.before_run", ["./src/toggle.do"])
 
 # folder for simulation outputs
-os.mkdir('./output')
+if not os.path.exist("./output"):
+  os.mkdir('./output')
 
 vu.main()
 
