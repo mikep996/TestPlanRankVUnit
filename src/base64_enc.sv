@@ -4,6 +4,8 @@
 // Last modified: $Date: 2020-09-04 12:05:52 +0200 (Fri, 04 Sep 2020) $
 // $Revision: 565775 $
 
+
+//MIKe
 module base64_enc (input clk, input reset, input integer fd_in, input integer fd_out, output bit complete);
 	byte c;
 	bit [7:0] c1;
