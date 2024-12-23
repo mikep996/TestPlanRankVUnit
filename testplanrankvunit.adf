@@ -1,0 +1,28 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=testplanrankvunit
+[Library]
+testplanrankvunit=.\testplanrankvunit\testplanrankvunit.lib
+[$LibMap$]
+testplanrankvunit=.
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+fileopenfolder=D:\TEMP\TestPlanRankVUnit
+[Files]
+/base64_enc.sv=-1
+/encoder.sv=-1
+/runme.do=-1
+/toggle.do=-1
+/..\run.py=-1
+[Files.Data]
+.\src\base64_enc.sv=SystemVerilog Source Code
+.\src\encoder.sv=SystemVerilog Source Code
+.\src\runme.do=Macro
+.\src\toggle.do=Macro
+.\run.py=External File
