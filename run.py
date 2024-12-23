@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-<<<<<<< HEAD
 ####
-=======
-#
->>>>>>> 5a9dd0cd1c2dcbb93afe78aed50f9d880cf45801
 from vunit import VUnit
 from pathlib import Path
 import os
