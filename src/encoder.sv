@@ -4,6 +4,8 @@
 // Last modified: $Date: 2015-02-26 08:24:56 +0100 (Thu, 26 Feb 2015) $
 // $Revision: 357294 $
 
+// HELLO MY FRIEND
+
 module encoder (input clk, input reset, input start, input enc, output reg en, input [5:0] data_in, output reg [6:0] data_out);
 
 function reg [7:0] Base64_Alphabet (input [5:0] in);
